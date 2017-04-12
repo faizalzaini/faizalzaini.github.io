@@ -2,16 +2,13 @@
 <title>3win8</title>
 
 <script type="text/javascript">
-var androidUrl = "http://cdn.ispeedycdn.com/ed/3win840010016.apk",
-    iPhoneUrl = "itms-services://?action=download-manifest&url=https://ed.3win8.com/3win840010016.plist",
-    pcUrl = "http://cdn.ispeedycdn.com/ed/3win8Kioskm40010016.exe";
+var OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("iPhone")!=-1) OSName="iPhone";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Android")!=-1) OSName="Android";
 
-if (navigator.appVersion.indexOf("Android")!=-1) 
-    $("#redirect").attr("href", androidUrl);
-else if (navigator.appVersion.indexOf("iPhone")!=-1) 
-    $("#redirect").attr("href", iPhoneUrl);
-else
-    $("#redirect").attr("href", pcUrl);
+document.write('Your OS: '+OSName);
 </script>
 
 </html>
