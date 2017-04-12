@@ -1,5 +1,17 @@
 <html>
-<title>Yo!</title>
-<h1>Yo</h1>
+<title>3win8</title>
+
+<script type="text/javascript">
+var androidUrl = "http://cdn.ispeedycdn.com/ed/3win840010016.apk",
+    iPhoneUrl = "itms-services://?action=download-manifest&url=https://ed.3win8.com/3win840010016.plist",
+    pcUrl = "http://cdn.ispeedycdn.com/ed/3win8Kioskm40010016.exe";
+
+if (navigator.appVersion.indexOf("Android")!=-1) 
+    $("#redirect").attr("href", androidUrl);
+else if (navigator.appVersion.indexOf("iPhone")!=-1) 
+    $("#redirect").attr("href", iPhoneUrl);
+else
+    $("#redirect").attr("href", pcUrl);
+</script>
 
 </html>
